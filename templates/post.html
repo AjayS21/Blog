@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+{% set fname = 'images/' + post.img_file %}
+<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
+<section>
+	<h1></h1>
+	<h3></h3>
+	<img src="{{ url_for('static', filename=fname) }}" />
+
+	<h2 class="mg">{{post.title}}</h2>
+	<p>{{post.content}}</p>
+	<p> Posted by Admin on {{post.date}}</p>
+</section>
+{% endblock %}

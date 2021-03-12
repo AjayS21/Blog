@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="/dashboard" method="post" style="display: inline-grid; margin-left: 40%; place-items: flex-start; margin-top: 50px;">
+    <!--{% set fname = 'img/'+  params['login_image']  %}
+    <img class="mb-4" src="{{url_for('static', filename=fname)}}" alt="" width="72" height="72">-->
+    <h1 style="margin: auto;">Admin Login</h1>
+    <label for="uname" class="sr-only" style="margin: auto;">User Name</label>
+    <input id="uname" class="form-control" placeholder="User Name" required autofocus style="margin: auto;width: auto;" name="uname">
+    <label for="pass" class="sr-only" style="margin: auto;">Password</label>
+    <input type="password" id="pass" class="form-control" placeholder="Password" required style="margin: auto;padding: 3px;" name="pass">
+    <div class="checkbox mb-3" style="margin: auto;">
+      <label>
+        <input type="checkbox" value="remember-me" style="margin: auto;"> Remember me
+      </label>
+    </div>
+    <button class="submit" type="submit" style="margin: auto;">Sign in</button>
+</form>
+{% endblock %}

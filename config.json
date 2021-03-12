@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/blogbob",
+    "prod_uri":"mysql://root:@localhost/blogbob",
+    "fb_url":"https://facebook.com/blogbob",
+    "tw_url":"https://twitter.com/blogbob",
+    "gh_url": "https://github.com/blogbob",
+    "title": "Bob's Blog",
+    "blog_name": "Blog Bob",
+    "tag_line": "Just another Blog !",
+    "gmail-user":"shahajay213@gmail.com",
+    "gmail-password":"*********",
+    "no_of_posts":4,
+    "login_image":"login.svg",
+    "admin_user":"Ajay",
+    "admin_password":"qwerty",
+    "upload_location":"C:\\Users\\nirav\\PycharmProjects\\Flask\\static"
+  }
+}
+

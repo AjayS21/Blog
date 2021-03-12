@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body %}
+
+			<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
+			<section >
+				<div id="contactpost" style="display: inline-block;width: 60%;" > 
+					<h1>Contact Us</h1>
+					<form method="post" action="/contact" method="post" style="margin: 20px 20px 20px 0px;">
+				        <div id="contactform">
+						<p><label for="name">Name</label><input type="user" name="name" id="name" placeholder=" your name" required data-validation-required-message="Please enter your name." /></p> 
+						<p><label for="email">Email</label><input type="email" name="email" id="email" placeholder=" your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = ' your@email.com'"required data-validation-required-message="Please enter your email address." /></p> 
+						<p class="help-block text-danger"></p>
+						<p><label for="phone">Phone No.</label><input type="user" name="phone" id="phone" placeholder="Phone Number" required data-validation-required-message="Please enter your phone number."></p> 
+					    <p><label for="message">Message</label><textarea name="message" id="message"></textarea></p>
+						<p style="padding-top: 105px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+						</div>
+				    </form>
+					&nbsp;
+				</div>
+
+				<!--__--__--__--  S I D E B A R --__--__--__--__-->
+				<div id="sidebar" style="margin: 10px;">
+					<aside>
+						<h1>Recent Posts</h1>
+						{% for post in posts %}
+						<ul>
+							<li><a href="#">{{post.title}}</a></li>		
+						</ul>
+						{% endfor %}
+					</aside>
+					<aside>
+						<div id="cat">
+							<h1>Categories</h1>
+							<ul>
+								<li><a href="#">Webdesign</a>
+								<li><a href="#">Javascript</a>
+								<li><a href="#">Tutorials</a>
+								<li><a href="#">Freebies</a>
+								<li><a href="#">Wordpress</a>
+								<li><a href="#">HTML/CSS</a>
+							</ul>
+						</div>
+						<div id="archives">
+							<h1>Archives</h1>
+							<ul>
+								<li><a href="#">November 2012</a>
+								<li><a href="#">December 2012</a>
+								<li><a href="#">January 2013</a>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</section>
+			{% endblock %}
+		
+			
+    
+    

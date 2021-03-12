@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!--__--__--__--__--  M A I N   C O N T E N T  --__--__--__--___--__--__-->
+<section style="display: flex;">
+
+	<!--__--__--__-- A R T I C L E S --__--__--__--__-->
+	<div id="articles">
+		{% for post in posts %}
+		{% set fname = 'images/' + post.img_file %}
+		<article style="padding-bottom: 10px">
+			<h2> <a href="/post">{{post.title}}</a> </h2>
+			<h3>Posted By: <a href="#">Admin</a> On {{post.date}} </h3>
+				<img id="imgblog" src="{{ url_for('static', filename=fname)}}" alt="" />
+				<p>{{post.content[0:400]}}...<a class="continue" href="/post/{{post.slug}}">Continue Reading &rarr;</a>
+				</p>
+		</article>
+		{% endfor %}
+	</div>
+	<!--__--__--__--  S I D E B A R --__--__--__--__-->
+	<div id="sidebar">
+		<aside>
+			<h1>Recent Posts</h1>
+			<ul style="width: 125px; margin-right: 25px;">
+				<li><a href="#">Suspendisse Enim Elit Tempor Acer</a></li>
+				<li><a href="#">Mauris Sed Lectus Duieleifend Quis Sem</a></li>
+				<li><a href="#">Suspendisse Enim Elit Tempor Acer Fermentum Vulputate</a></li>
+				<li><a href="#">Mauris Sed Lectus Duieleifend Quis Sem</a></li>
+			</ul>
+		</aside>
+		<aside>
+			<div id="cat">
+				<h1>Categories</h1>
+				<ul>
+					<li><a href="#">Webdesign</a>
+					<li><a href="#">Javascript</a>
+					<li><a href="#">Tutorials</a>
+					<li><a href="#">Freebies</a>
+					<li><a href="#">Wordpress</a>
+					<li><a href="#">HTML/CSS</a>
+				</ul>
+			</div>
+			<div id="archives">
+				<h1>Archives</h1>
+				<ul>
+					<li><a href="#">November 2012</a>
+					<li><a href="#">December 2012</a>
+					<li><a href="#">January 2013</a>
+				</ul>
+			</div>
+		</aside>
+	</div>
+</section>
+{% endblock %}
